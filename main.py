@@ -64,11 +64,12 @@ def main():
 
     # 4 hours is 14400
     while(True):
+        print("Beginning first iteration\n")
         artist, song_name = get_track_from_playlist()
         lyrics = get_song_lyrics(artist, song_name)
         lyric_one, lyric_two = choose_lyrics_to_tweet(lyrics)
         send_tweet(lyric_one, lyric_two, artist, song_name)
-        time.sleep(14400)
+        time.sleep(20)
 
 
 if __name__ == "__main__":
