@@ -1,5 +1,5 @@
-import config
 import requests
+import os
 
 AUTH_URL = 'https://accounts.spotify.com/api/token'
 BASE_URL = 'https://api.spotify.com/v1/playlists/'
@@ -10,8 +10,8 @@ RNB_PLAYLIST_ID = "37i9dQZF1DWYmmr74INQlb"
 def get_spotify_client():
     return requests.post(AUTH_URL, {
         'grant_type': 'client_credentials',
-        'client_id': config.spotify_client_id,
-        'client_secret': config.spotify_client_secret,
+        'client_id': os.getenv("spotify_client_id"),
+        'client_secret': os.getenv("spotify_client_secret"),
     })
 
 def get_spotify_access_token():
