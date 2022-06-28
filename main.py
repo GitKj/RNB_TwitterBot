@@ -68,7 +68,7 @@ def main():
         lyrics = get_song_lyrics(artist, song_name)
         lyric_one, lyric_two = choose_lyrics_to_tweet(lyrics)
         send_tweet(lyric_one, lyric_two, artist, song_name)
-        time.sleep(15)
+        time.sleep(14400)
 
 
 if __name__ == "__main__":
